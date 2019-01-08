@@ -1,10 +1,7 @@
 <?php
-    include "links-admin.php"; 
-    require_once './admin-bl.php';
-    $abl = new BusinessLogicAdmin;
-    $arrayOfAdmin = $abl->get();
-    $admin = $abl->getOne($_SESSION["adminemail"]);
-    
+    include "links-variables-admin.php";
+    //The variable gets as an array of objects the details of the admin who logged in;
+    $admin = $abl->getOne($_SESSION["adminemail"]); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,8 +24,8 @@
       <a class="navbar-brand" href="#"><img src="img/college.png" width="70px"; height="30px";/></a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="school.php">school</a></li>
-      <li class="active"><a href="admin.php">administration</a></li>
+      <li><a href="homepage-school.php">school</a></li>
+      <li class="active"><a href="homepage-admin.php">administration</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="logout.php">logout</a></li>

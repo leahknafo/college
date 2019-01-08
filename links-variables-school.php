@@ -1,5 +1,5 @@
 <?php
-// All "view" pages of "school" are linked to this page which contains the code to execute once a button from the system buttons is pressed .
+// All "view" pages of "school" are linked to this page which contains the code to execute while a button of the system buttons is pressed .
 // If the clicked button is one of the "students-details" or "courses-details" buttons, the corresponding "session" will receive the ID information of the click. 
 // This information will be used to perform the various actions of the system. 
 // Additionally, this page also contains the necessary variables for all school pages, and the expression "session_srart" for them;
@@ -27,9 +27,9 @@
               if (isset($_POST["editcoursebutton"])) {
                 header("Location: edit-course.php");
                 }
-                require_once './course-bl.php';
-                require_once './student-bl.php';
-                require_once './admin-bl.php';
+                require_once './bl-course.php';
+                require_once './bl-student.php';
+                require_once './bl-admin.php';
                 $cbl = new BusinessLogicCourse;
                 $sbl = new BusinessLogicStudent;
                 $abl = new BusinessLogicAdmin;

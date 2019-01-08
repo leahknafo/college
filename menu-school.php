@@ -1,5 +1,6 @@
 <?php
 include 'links-variables-school.php';  
+//The variable gets as an array of objects the details of the admin who logged in;
 $admin = $abl->getOne($_SESSION["adminemail"]);
 ?>
 <!DOCTYPE html>
@@ -23,9 +24,9 @@ $admin = $abl->getOne($_SESSION["adminemail"]);
       <a class="navbar-brand" href="#"><img src="img/college.png" width="70px"; height="30px";/></a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="school.php">school</a></li>
+      <li class="active"><a href="homepage-school.php">school</a></li>
       <?php if($_SESSION["user"] =="owner"||$_SESSION["user"] =="manager") { ?>
-      <li><a href="admin.php">administration</a></li>
+      <li><a href="homepage-admin.php">administration</a></li>
      <?php } ?>
     </ul>
     <ul class="nav navbar-nav navbar-right">

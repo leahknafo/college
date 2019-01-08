@@ -1,8 +1,5 @@
 <?php
-include "links-admin.php"; 
-require_once './admin-bl.php';
-    $abl = new BusinessLogicAdmin;
-    $path='img/';
+include "links-variables-admin.php"; 
 // Server side validations
 if (
     !empty($_POST['adminname']) && 
@@ -28,7 +25,7 @@ if (
     ]);
  
     $abl->set($admin);
-    include 'admin.php';
+    include 'homepage-admin.php';
     }
     else{
          //If image is not supported, go back to "add-admin" page;

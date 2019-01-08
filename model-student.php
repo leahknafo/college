@@ -1,6 +1,6 @@
 <?php 
 require_once './model.php';
-require_once 'course-bl.php';
+require_once 'bl-course.php';
     class StudentModel implements IModel{
         private $student_id;
         private $student_name;

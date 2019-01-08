@@ -1,6 +1,6 @@
 <?php
 include 'links-variables-school.php'; 
- require_once 'admin-bl.php';
+ require_once 'bl-admin.php';
 $abl = new BusinessLogicAdmin;
 if(isset($_POST["loginbutton"])){
   $Admin = $abl->getOne($_POST["email"]);
@@ -15,7 +15,7 @@ if(isset($_POST["loginbutton"])){
     else if($Admin->getAdminRole() == "sales"){
       $_SESSION["user"] ="sales";
       }
-      include 'school.php';
+      include 'homepage-school.php';
   }
   else{
     $message = "Unregistered user";

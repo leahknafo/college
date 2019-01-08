@@ -1,8 +1,11 @@
 <?php
 include 'menu-school.php'; 
+//The variable gets as an array of objects the students of the course that was clicked;
 $arrayOfStudentsByCourse= $sbl->getStudentByCourse($_SESSION["detailsofcourse"]);
+//The variable gets as an array of objects the details of the course that was clicked;
 $courseDetails= $cbl->getOne($_SESSION["detailsofcourse"]);
 ?>
+
 <main class="maincontainer">
     <div class="container">
     <form action='<?php echo basename($_SERVER['PHP_SELF']); ?>' method='POST'>

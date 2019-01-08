@@ -1,6 +1,6 @@
 <?php
     require_once 'bl.php';
-    require_once './admin-model.php';
+    require_once './model-admin.php';
     class BusinessLogicAdmin extends BusinessLogic{
         public function get()
         {

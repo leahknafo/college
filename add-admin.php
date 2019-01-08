@@ -5,8 +5,8 @@ include 'menu-admin.php';
     <div class="container">
     <h4><strong>Add Administrator</strong></h4>
     <hr>
-    <!-- After filling out the details on the form and clicking the button, Upon completion of the client-side validation,
-         the data goes to the page specified in "action" for server side validation and data retention. -->
+    <!-- After filling out the fields of the form and clicking the button, Upon completion of the client-side validation,
+         the data goes to the page specified in "action" for server-side validation and saving information in sql; -->
         <form class="form-horizontal" action="save-admin.php" method='POST' enctype="multipart/form-data">
         <div class="form-group">
                 <div class="col-md-offset-0 col-sm-10">

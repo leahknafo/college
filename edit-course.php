@@ -1,6 +1,8 @@
 <?php
 include 'menu-school.php';
-$courseDetails= $cbl->getOne($_SESSION["detailsofcourse"]);
+//The variable gets as an array of objects the details of the course that was clicked;
+$courseDetails= $cbl->getOne($_SESSION["detailsofcourse"]);]
+//The variable gets as an array of objects the students of the course that was clicked;
 $arrayOfStudentsByCourse= $sbl->getStudentByCourse($_SESSION["detailsofcourse"]);
 ?>
 <main class="maincontainer">
@@ -41,12 +43,13 @@ $arrayOfStudentsByCourse= $sbl->getStudentByCourse($_SESSION["detailsofcourse"])
         </form>
     </div>
     <script>
-
-      var loadFile = function(event) {
+//This code snippet allows the previewing of the uploaded image;
+    var loadFile = function(event) {
     var output = document.getElementById('output');
     output.src = URL.createObjectURL(event.target.files[0]);
   };  
  
+ //client-side validations;
     function validation(e)
     {
             if ($("#name").val().length>20)

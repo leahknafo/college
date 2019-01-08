@@ -1,5 +1,6 @@
 <?php
-include 'menu-school.php';  
+include 'menu-school.php'; 
+//The variable gets as an array of objects the details of the student that was clicked; 
 $studentsDetails= $sbl->getOne($_SESSION["detailsOfStudent"]);
 ?>
     <main class="maincontainer">
@@ -66,11 +67,13 @@ $studentsDetails= $sbl->getOne($_SESSION["detailsOfStudent"]);
         </form>
     </div>
     <script>
-       var loadFile = function(event) {
+    //This code snippet allows the previewing of the uploaded image;
+    var loadFile = function(event) {
     var output = document.getElementById('output');
     output.src = URL.createObjectURL(event.target.files[0]);
   };  
 
+//client-side validations;
     function validation(e)
     {
         if ($("#phone").val().length>10 || $("#phone").val().length<9)

@@ -1,10 +1,9 @@
 <?php
   include "menu-admin.php";
-            require_once './admin-bl.php';
-            $abl = new BusinessLogicAdmin;
-            $arrayOfAdmin = $abl->get();
-            $adminDetails= $abl->getOne($_SESSION["detailsOfAdmin"]);
+  //The variable gets as an array of objects the details of the admin that was clicked;
+  $adminDetails= $abl->getOne($_SESSION["detailsOfAdmin"]);
 ?>
+
 <main class="maincontainer">
     <div class="container">
     <form class="form-horizontal" action="update-delete-admin.php" method='POST' enctype="multipart/form-data">
@@ -70,12 +69,13 @@
         </form>
 </div>
 <script>
-
+//This code snippet allows the previewing of the uploaded image;
   var loadFile = function(event) {
     var output = document.getElementById('output');
     output.src = URL.createObjectURL(event.target.files[0]);
   };  
 
+//client-side validations;
     function validation(e)
     {
         if ($("#phone").val().length>10 || $("#phone").val().length<9)

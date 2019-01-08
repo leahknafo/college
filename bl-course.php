@@ -1,6 +1,6 @@
 <?php
     require_once 'bl.php';
-    require_once './course-model.php';
+    require_once './model-course.php';
     class BusinessLogicCourse extends BusinessLogic{
         public function get()
         {

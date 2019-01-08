@@ -11,14 +11,17 @@ $arrayOfStudentsByCourse= $sbl->getStudentByCourse($_SESSION["detailsofcourse"])
           strlen($_POST['coursedesc']) <= 500 && 
           strlen($_POST['coursename']) <= 20){
       $detailsOfCourse= $cbl->getOne($_POST["savecourse"]);
+      //If an image has been updated, the image should be validated:
       if ($_FILES['input']['tmp_name']!=null) {
         include 'upload-file-valid.php';
         }
     else{
+      //If the picture remains the same, continue;
           $uploadOk = 1 ;
           move_uploaded_file($_FILES['input']['tmp_name'],$path.$_FILES['input']['name']);
         }
       if ($uploadOk != 0){
+        //If the picture remains the same or if it updated and validated successfully, update data in sql:
       $detailsOfCourse->setCourseName($_POST['coursename']);
       $detailsOfCourse->setCourseDesc($_POST['coursedesc']);
       if ($_FILES['input']['tmp_name']!=null) {
@@ -28,6 +31,7 @@ $arrayOfStudentsByCourse= $sbl->getStudentByCourse($_SESSION["detailsofcourse"])
         include 'details-course.php';
     }
   else{
+    //If the validations did not pass successfully return to "edit-course.php":
     include 'edit-course.php';
 }
 }
@@ -41,7 +45,7 @@ $arrayOfStudentsByCourse= $sbl->getStudentByCourse($_SESSION["detailsofcourse"])
       }
         else{
           $cbl->delete($_POST["deletecourse"]);
-          include 'school.php';
+          include 'homepage-school.php';
         }
     }
 ?>
