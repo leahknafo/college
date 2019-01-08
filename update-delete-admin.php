@@ -8,6 +8,7 @@ $path='img/';
 if (isset($_POST["deleteadmin"])) {
     $abl->delete($_POST["adminemail"]);
 }
+// Server side validations
 if (!empty($_POST["adminname"]) 
     && !empty($_POST["adminphone"])
     && !empty($_POST["adminemail"]) 

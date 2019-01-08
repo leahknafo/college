@@ -6,6 +6,7 @@ include 'links-variables-school.php';
         $sbl->deleteStudentByCourse($_POST["deletestudent"]);
         include 'school.php';
     }
+    // Server side validations
     if (
         isset($_POST["savestudent"]) && 
         !empty($_POST["studentname"]) && 
@@ -32,9 +33,6 @@ include 'links-variables-school.php';
             $detailsOfStudent->setStudentImage($path.$_FILES['input']['name']);
           }
           $sbl->update($detailsOfStudent);
-         
-         
-
           $sbl->deleteStudentByCourse($_POST["savestudent"]);
           foreach ($_POST["studentcourse"] as $courseId) {
                 $sbl->setStudentByCourse($_POST['savestudent'],$courseId);

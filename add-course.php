@@ -5,6 +5,8 @@ include 'menu-school.php';
     <div class="container">
     <h4><strong>Add Course</strong></h4>
     <br>
+     <!-- After filling out the details on the form and clicking the button, Upon completion of the client-side validation,
+         the data goes to the page specified in "action" for server side validation and data retention. -->
         <form class="form-horizontal" action="save-course.php" method='POST' enctype="multipart/form-data">
         <div class="form-group">
                 <div class="col-md-offset-0 col-sm-10">
@@ -35,12 +37,14 @@ include 'menu-school.php';
     </div>
     <script>
 
-        var loadFile = function(event) {
+//This code snippet allows the previewing of the uploaded image;
+    var loadFile = function(event) {
     var output = document.getElementById('output');
     output.src = URL.createObjectURL(event.target.files[0]);
   };   
 
 
+//client-side validations;
     function validation(e)
     {
             if ($("#name").val().length>20)

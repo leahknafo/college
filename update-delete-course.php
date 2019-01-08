@@ -1,6 +1,7 @@
 <?php
 include 'links-variables-school.php';
 $arrayOfStudentsByCourse= $sbl->getStudentByCourse($_SESSION["detailsofcourse"]);
+// Server side validations;
     if (
       isset($_POST["savecourse"]) && 
       !empty($_POST["coursename"]) && 
