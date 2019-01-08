@@ -1,0 +1,37 @@
+body {
+    max-width: 1500px;
+    margin:0 auto;
+}
+.maincontainer{ 
+    position: absolute;
+    left:750px;
+    top: 100px;
+    border: 3px dotted black;
+    width: 500px;
+}
+.editbutton{
+    position: absolute;
+    left: 400px;
+    top: 2px;
+}
+.deletebutton{
+    position: absolute;
+    left: 400px;
+    top: 70px;  
+}
+.savebutton{
+    position: absolute;
+    top: 70px;  
+}
+
+.desc {
+    width: 340px;
+    word-wrap: break-word;
+    height: 100PX;
+    overflow: auto;
+}
+.name{
+    width: 120px;
+    word-wrap: break-word;
+}
+
