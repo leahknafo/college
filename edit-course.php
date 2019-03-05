@@ -1,7 +1,7 @@
 <?php
 include 'menu-school.php';
 //The variable gets as an array of objects the details of the course that was clicked;
-$courseDetails= $cbl->getOne($_SESSION["detailsofcourse"]);]
+$courseDetails= $cbl->getOne($_SESSION["detailsofcourse"]);
 //The variable gets as an array of objects the students of the course that was clicked;
 $arrayOfStudentsByCourse= $sbl->getStudentByCourse($_SESSION["detailsofcourse"]);
 ?>
