@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: ינואר 09, 2019 בזמן 08:15 AM
+-- Generation Time: מרץ 19, 2019 בזמן 08:39 PM
 -- גרסת שרת: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -43,11 +43,11 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `admin_name`, `admin_role`, `admin_phone`, `admin_email`, `admin_password`, `admin_image`) VALUES
-(6, 'Yoram', 'owner', '0526633996', 'yoram@gmail.com', 'b59c67bf196a4758191e42f76670ceba', 'img/images (2).jpg'),
-(14, 'Golan', 'manager', '052447788', 'golan@gmail.com', '2be9bd7a3434f7038ca27d1918de58bd', 'img/images (3).jpg'),
-(19, 'Ronen', 'sales', '0548899663', 'ronen@gmail.com', 'fa246d0262c3925617b0c72bb20eeb1d', 'img/images (4).jpg'),
-(22, 'Haim', 'manager', '0584455887', 'haim@gmail.com', 'ec5dfb96ddcc82988525f63f0b8a96b0', 'img/haim.jpg'),
-(24, 'David', 'sales', '0524455886', 'david@gmail.com', '1c4067bbf833bd0869ff71d1fedbceeb', 'img/beni.png');
+(6, 'Yoram', 'owner', '0526633996', 'yoram@gmail.com', '2f7b52aacfbf6f44e13d27656ecb1f59', 'img/cc.jpg'),
+(14, 'Golan', 'manager', '052447788', 'golan@gmail.com', '4e3da2ae832730d1abbf10611df36ea6', 'img/bb.jpg'),
+(19, 'Ronen', 'sales', '0548899663', 'ronen@gmail.com', '2c8b6c4c8117fe557d6ff36cd80b132f', 'img/dd.jpg'),
+(22, 'Haim', 'manager', '0584455887', 'haim@gmail.com', '7cd9d483df890d33287f8815fe5d4569', 'img/aa.jpg'),
+(24, 'David', 'sales', '0524455886', 'david@gmail.com', '36e1d065d4531354267970688507d6cb', 'img/ff.jpg');
 
 -- --------------------------------------------------------
 
@@ -89,13 +89,14 @@ CREATE TABLE `course_student` (
 --
 
 INSERT INTO `course_student` (`course_id`, `student_id`) VALUES
-(1, 25),
 (1, 31),
 (2, 31),
 (2, 49),
 (2, 158),
+(2, 159),
 (3, 31),
 (3, 159),
+(3, 160),
 (14, 87),
 (14, 159),
 (18, 87);
@@ -119,12 +120,12 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`student_id`, `student_name`, `student_phone`, `student_email`, `student_image`) VALUES
-(25, 'Yossi', '0522222211', 'test2@test2.com', 'img/yossi.jpg'),
-(31, 'Hila', '0528888855', 'hila@gmail.com', 'img/noa.png'),
-(49, 'Efrat', '0547788555', 'efrat@gmail.com', 'img/efrat.jpg'),
-(87, 'Gad', '0548877556', 'gad@gmail.com', 'img/gad.jpg'),
-(158, 'Tali', '0548877552', 'tali@gmail.com', 'img/sara.jpg'),
-(159, 'Moshe', '0548855663', 'moshe@gmail.com', 'img/avi.png');
+(31, 'Hila', '0528888855', 'hila@gmail.com', 'img/h.jpg'),
+(49, 'Efrat', '0547788555', 'efrat@gmail.com', 'img/d.jpg'),
+(87, 'Gad', '0548877556', 'gad@gmail.com', 'img/b.jpg'),
+(158, 'Tali', '0548877552', 'tali@gmail.com', 'img/images.jpg'),
+(159, 'Moshe', '0548855663', 'moshe@gmail.com', 'img/a.jpg'),
+(160, 'Noa', '0542288996', 'k@w', 'img/f.jpg');
 
 --
 -- Indexes for dumped tables
@@ -175,7 +176,7 @@ ALTER TABLE `course`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `student_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
+  MODIFY `student_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
 
 --
 -- הגבלות לטבלאות שהוצאו
