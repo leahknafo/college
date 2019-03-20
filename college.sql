@@ -43,11 +43,11 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `admin_name`, `admin_role`, `admin_phone`, `admin_email`, `admin_password`, `admin_image`) VALUES
-(6, 'Yoram', 'owner', '0526633996', 'yoram@gmail.com', '2f7b52aacfbf6f44e13d27656ecb1f59', 'img/cc.jpg'),
-(14, 'Golan', 'manager', '052447788', 'golan@gmail.com', '4e3da2ae832730d1abbf10611df36ea6', 'img/bb.jpg'),
-(19, 'Ronen', 'sales', '0548899663', 'ronen@gmail.com', '2c8b6c4c8117fe557d6ff36cd80b132f', 'img/dd.jpg'),
-(22, 'Haim', 'manager', '0584455887', 'haim@gmail.com', '7cd9d483df890d33287f8815fe5d4569', 'img/aa.jpg'),
-(24, 'David', 'sales', '0524455886', 'david@gmail.com', '36e1d065d4531354267970688507d6cb', 'img/ff.jpg');
+(6, 'Yoram', 'owner', '0526633996', 'yoram@gmail.com', 'b59c67bf196a4758191e42f76670ceba', 'img/cc.jpg'),
+(14, 'Golan', 'manager', '052447788', 'golan@gmail.com', '2be9bd7a3434f7038ca27d1918de58bd', 'img/bb.jpg'),
+(19, 'Ronen', 'sales', '0548899663', 'ronen@gmail.com', 'fa246d0262c3925617b0c72bb20eeb1d', 'img/dd.jpg'),
+(22, 'Haim', 'manager', '0584455887', 'haim@gmail.com', 'ec5dfb96ddcc82988525f63f0b8a96b0', 'img/aa.jpg'),
+(24, 'David', 'sales', '0524455886', 'david@gmail.com', '1c4067bbf833bd0869ff71d1fedbceeb', 'img/ff.jpg');
 
 -- --------------------------------------------------------
 
